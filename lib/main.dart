@@ -3,6 +3,9 @@ import 'package:flutter/material.dart';
 import 'BottomNavigationBarApp.dart';
 import 'AppBarApp.dart';
 import 'DrawerApp.dart';
+import 'FutureBuilderApp.dart';
+import 'HttpApp.dart';
+import 'SharePreferenceApp.dart';
 
 void main() => runApp(MyApp());
 
@@ -52,6 +55,35 @@ class MyHomePage extends StatelessWidget {
                 );
               },
             ),
+            RaisedButton(
+              child: Text('Http请求'),
+              onPressed: () {
+                Navigator.push(
+                  context,
+                  new MaterialPageRoute(builder: (context) => HttpApp()),
+                );
+              },
+            ),
+            RaisedButton(
+              child: Text('FutureBuilder使用'),
+              onPressed: () {
+                Navigator.push(
+                  context,
+                  new MaterialPageRoute(builder: (context) => FutureBuilderApp()),
+                );
+              },
+            ),
+
+            RaisedButton(
+              child: Text('SharePreferemceApp使用'),
+              onPressed: () {
+                Navigator.push(
+                  context,
+                  new MaterialPageRoute(builder: (context) => SharePreferenceApp()),
+                );
+              },
+            ),
+
           ],
         ),
       ),
